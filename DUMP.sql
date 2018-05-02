@@ -98,22 +98,37 @@ CREATE TABLE livre(
 	constraint cle_prim6 primary key (numCom, numLiv)
 );
 
+
+
+INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (12313131, 10, 20, 'roses.jpg','livré',5);
+INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (14443444, 20, 35, 'tulipes.jpg','prêt à l envoi',3);
+INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (32134442, 40, 60, 'tourn.jpg','prêt à l envoi',4);
+
+
+INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000001,'en cours de livraison','2016-11-11','2016-11-13',NULL);
+INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000002,'en cours de livraison','2016-11-16','2016-11-22',NULL);
+
+
+INSERT INTO Client(numCli, mail, nom, club) VALUES (451367, 'michel58@gmail.com','Michel',false);
+INSERT INTO Client(numCli, mail, nom, club) VALUES (689351, 'rachelle13@hotmail.com','Rousseau',true);
+INSERT INTO Client(numCli, mail, nom, club) VALUES (441367, 'francois.dupont@yahoo.fr','Dupont',true);
+
+INSERT INTO Destinataire(numDes, ville, message, nom, adresse) VALUES (2743155555, 77270,'Une pensée pour toi','Fautras','10 rue de la source');
+INSERT INTO Destinataire(numDes, ville, message, nom, adresse) VALUES (1344567857, 93160,'Je n ai pas oublié...','Nguyen','12 allée Jean Jaures');
+
+INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (412345,'chronopost','en cours');
+INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (548632,'chronopost','livré');
+INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (548932,'livreur','0778421753');
+
+INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(0451,'Rose',2,3,'plantée');
+INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1875,'Tournesol',0,3,'poussée');
+
+
+
+INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower')
+
+
 /*
-
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (278945, 'Roses', 86, 60.99, 'roses.jpg');
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (783456, 'Tulipes', 93,67.99, 'tulipes.jpg');
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (856349, 'Tournesol', 37,23, 'tourn.jpg');
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (184753, ' Chrysanthèmes', 58,40, 'chrys.jpg');
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (184847, 'Lys', 78.3,49.99, 'lys.jpg');
-INSERT INTO Bouquet(numBou, nombou, taille, prix) VALUES (184847, 'Pivoines', 78.3,49.99, 'pivoines.jpg');
-
-
-
-INSERT INTO Commande(numCom, etat, dateComande, dateLivraison) VALUES (45782134567,'en cours de livraison','2016-10-27','2016-11-01');
-INSERT INTO Commande(numCom, etat, dateComande, dateLivraison) VALUES (43623432328,'prêt à l envoi','2016-11-18','2016-11-30');
-INSERT INTO Commande(numCom, etat, dateComande, dateLivraison) VALUES (56789471658,'livré','2016-10-12','2016-10-22');
-INSERT INTO Commande(numCom, etat, dateComande, dateLivraison) VALUES (35645625988,'en cours de livraison','2016-11-11','2016-11-13');
-INSERT INTO Commande(numCom, etat, dateComande, dateLivraison) VALUES (36277777345,'en cours de livraison','2016-11-16','2016-11-22');
 
 INSERT INTO Passer VALUES (36277777345, 745123);
 INSERT INTO Passer VALUES (35645625988, 624864);
@@ -133,18 +148,6 @@ INSERT INTO Concerner VALUES (2474123456, 56789471658);
 INSERT INTO Concerner VALUES (1344567857, 43623432328);
 INSERT INTO Concerner VALUES (2743155555, 45782134567);
 
-INSERT INTO Client(numCli, mdp, mail, nom, club) VALUES (451367,'hey','michel58@gmail.com','Michel',false);
-INSERT INTO Client(numCli, mdp, mail, nom, club) VALUES (689351,'superman','rachelle13@hotmail.com','Rousseau',true);
-INSERT INTO Client(numCli, mdp, mail, nom, club) VALUES (451367,'jaime','francois.dupont@yahoo.fr','Dupont',true);
-INSERT INTO Client(numCli, mdp, mail, nom, club) VALUES (624864,'azertyuiop','claude.bernad@gmail.com','Bernard',true);
-INSERT INTO Client(numCli, mdp, mail, nom, club) VALUES (745123,'non','helene.chateau@gmail.com','Chateau',false);
-
-
-INSERT INTO Destinataire(numDes, ville, messsage, nom, adresse) VALUES (2743155555, 77270,'Une pensée pour toi','Fautras','10 rue de la source');
-INSERT INTO Destinataire(numDes, ville, messsage, nom, adresse) VALUES (1344567857, 93160,'Je n ai pas oublié...','Nguyen','12 allée Jean Jaures');
-INSERT INTO Destinataire(numDes, ville, messsage, nom, adresse) VALUES (2474123456, 75016,NULL,'Fautras','8 rue de la liberté');
-INSERT INTO Destinataire(numDes, ville, messsage, nom, adresse) VALUES (1674567823, 69000,'Une surprise ne vient jamais seule','Duval','14 rue des coquelicots');
-INSERT INTO Destinataire(numDes, ville, messsage, nom, adresse) VALUES (2748799315, 62100,NULL,'Pourquoi la vie est-elle si courte, pourquoi la vie ? Tant de question et aucune réponse...','10 allée George Braque');
 
 
 INSERT INTO Magasin(numMag, ville ) ( 3, 94150);
@@ -160,9 +163,4 @@ INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 75014,'livreur');
 INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 69230,'chronopost');
 INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 59000,'livreur');
 
-
-INSERT INTO Livraison(numLiv, typeLiv, tel, nom) VALUES (412345,'chronopost',NULL,NULL);
-INSERT INTO Livraison(numLiv, typeLiv, tel, nom) VALUES (548632,'chronopost',NULL,NULL);
-INSERT INTO Livraison(numLiv, typeLiv, tel, nom) VALUES (548632,'livreur','0778421753','Da Silva');
-INSERT INTO Livraison(numLiv, typeLiv, tel, nom) VALUES (548632,'chronopost',NULL,NULL);
-INSERT INTO Livraison(numLiv, typeLiv, tel, nom) VALUES (548632,'livreur','0369685768','Durant'); */
+*/
