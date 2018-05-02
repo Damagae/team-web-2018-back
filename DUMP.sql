@@ -1,3 +1,5 @@
+/*TABLE */
+
 CREATE TABLE Bouquet(
 	numBou int primary key,
 	taille int NOT NULL,
