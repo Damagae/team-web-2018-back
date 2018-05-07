@@ -104,10 +104,9 @@ INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (123131
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (14443444, 20, 35, 'tulipes.jpg','prêt à l envoi',3);
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (32134442, 40, 60, 'tourn.jpg','prêt à l envoi',4);
 
-
 INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000001,'en cours de livraison','2016-11-11','2016-11-13',NULL);
 INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000002,'en cours de livraison','2016-11-16','2016-11-22',NULL);
-
+INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000003,'en cours de livraison','2016-11-18','2016-11-24',NULL);
 
 INSERT INTO Client(numCli, mail, nom, club) VALUES (451367, 'michel58@gmail.com','Michel',false);
 INSERT INTO Client(numCli, mail, nom, club) VALUES (689351, 'rachelle13@hotmail.com','Rousseau',true);
@@ -115,52 +114,39 @@ INSERT INTO Client(numCli, mail, nom, club) VALUES (441367, 'francois.dupont@yah
 
 INSERT INTO Destinataire(numDes, ville, message, nom, adresse) VALUES (2743155555, 77270,'Une pensée pour toi','Fautras','10 rue de la source');
 INSERT INTO Destinataire(numDes, ville, message, nom, adresse) VALUES (1344567857, 93160,'Je n ai pas oublié...','Nguyen','12 allée Jean Jaures');
+INSERT INTO Destinataire(numDes, ville, message, nom, adresse) VALUES (0000000000, 93161,'Jai oublié','Dark Vador','étoile noire');
 
 INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (412345,'chronopost','en cours');
-INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (548632,'chronopost','livré');
+INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (548632,'chronopost','livrée');
 INSERT INTO Livreur(numLiv, modeLivraison, etat) VALUES (548932,'livreur','0778421753');
 
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(0451,'Rose',2,3,'plantée');
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1875,'Tournesol',0,3,'poussée');
+INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1976,'Tulipe',0,3,'plantée');
 
+INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower');
+INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99998,'azerty','mail@gmail.com', 'Damien Trolar', 'Fleurs & co');
 
+INSERT INTO Compose VALUES (12313131, 0451);
+INSERT INTO Compose VALUES (14443444, 1976);
+INSERT INTO Compose VALUES (32134442, 1875);
 
-INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower')
+INSERT INTO Passe VALUES (451367, 000001);
+INSERT INTO Passe VALUES (689351, 000002);
+INSERT INTO Passe VALUES (441367, 000003);
 
+INSERT INTO concerne VALUES (2743155555, 000001);
+INSERT INTO concerne VALUES (1344567857, 000002);
+INSERT INTO concerne VALUES (0000000000, 000003);
 
-/*
+INSERT INTO constitue VALUES (12313131, 000001);
+INSERT INTO constitue VALUES (14443444, 000002);
+INSERT INTO constitue VALUES (32134442, 000003);
 
-INSERT INTO Passer VALUES (36277777345, 745123);
-INSERT INTO Passer VALUES (35645625988, 624864);
-INSERT INTO Passer VALUES (56789471658, 451367);
-INSERT INTO Passer VALUES (43623432328, 689351);
-INSERT INTO Passer VALUES (45782134567, 451367);
+INSERT INTO controle VALUES (000001, 99999);
+INSERT INTO controle VALUES (000002, 99998);
+INSERT INTO controle VALUES (000003, 99998);
 
-INSERT INTO composer VALUES (278945, 36277777345);
-INSERT INTO composer VALUES (783456, 35645625988);
-INSERT INTO composer VALUES (856349, 56789471658);
-INSERT INTO composer VALUES (856349, 43623432328);
-INSERT INTO composer VALUES (184847, 45782134567);
-
-INSERT INTO Concerner VALUES (2748799315, 36277777345);
-INSERT INTO Concerner VALUES (1674567823, 35645625988);
-INSERT INTO Concerner VALUES (2474123456, 56789471658);
-INSERT INTO Concerner VALUES (1344567857, 43623432328);
-INSERT INTO Concerner VALUES (2743155555, 45782134567);
-
-
-
-INSERT INTO Magasin(numMag, ville ) ( 3, 94150);
-INSERT INTO Magasin(numMag, ville ) ( 4, 77500);
-INSERT INTO Magasin(numMag, ville ) ( 1, 75018);
-INSERT INTO Magasin(numMag, ville ) ( 6, 69230);
-INSERT INTO Magasin(numMag, ville ) ( 3, 59000);
-
-
-INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 94150,'chronopost');
-INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 77500,'chronopost');
-INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 75014,'livreur');
-INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 69230,'chronopost');
-INSERT INTO CodePostal(codePost, Modelivraison) VALUES ( 59000,'livreur');
-
-*/
+INSERT INTO livre VALUES (000001, 412345);
+INSERT INTO livre VALUES (000002, 548632);
+INSERT INTO livre VALUES (000003, 548932);
