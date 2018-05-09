@@ -12,15 +12,37 @@
 */
 
 $router->get('/', function () use ($router) {
+	    echo "HELLO WORLD ";
     return $router->app->version();
 });
 
-$router->get('/u/:userId', function () use ($router) {
-    echo "Route  /u/:userId ";
+$router->get('/u/{userId}', function ($userId) use ($router) {
+    echo "hello" .$userId ;
     return $router->app->version();
 });
 
-$router->get('/user', function () use ($router) {
-    echo "Hello";
+
+
+$router->get('/u/{userId}/goals', function ($userId) use ($router) {
+    echo "USER GOALS ";
+    return $router->app->version();
+});
+
+$router->get('/u/{userId}/sales/month/:month', function ($userId) use ($router) {
+    echo "MONTHLY SALES";
+    return $router->app->version();
+});
+
+
+$router->get(' /u/:userId/orders/current/:sort', function ($userId) use ($router) {
+    echo "ORDERS";
+    return $router->app->version();
+});
+
+
+
+
+$router->get(' /u/:userId/orders/old/:sort', function ($userId) use ($router) {
+    echo "OLD ORDERS";
     return $router->app->version();
 });
