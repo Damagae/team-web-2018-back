@@ -24,6 +24,13 @@ $router->get('/', function () use ($router) {
  $router->get('/u/{numUser}/orders/current/2', ['uses' => 'CommandeController@currentCommandeDate']);
 
 
+// ROUTE 13 - Commandes passées par User classées par Clients Alphabétique
+ $router->get('/u/{numUser}/orders/old/1', ['uses' => 'CommandeController@oldCommandeName']);
+
+// ROUTE 14 - Commandes passées par User classées par date
+ $router->get('/u/{numUser}/orders/old/2', ['uses' => 'CommandeController@oldCommandeDate']);
+
+
 // ROUTE 8 - VENTES PAR MOIS 
 //$router->get('/u/{numUser}/sales/month/{month}}/commandes', ['uses' => 'CommandeController@currentCommande']);
 

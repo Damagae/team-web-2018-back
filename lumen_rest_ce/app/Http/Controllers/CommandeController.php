@@ -47,6 +47,7 @@ class CommandeController extends Controller
              ->join('Client','Client.numCli','=','passe.numCli')
              ->select('Client.*','Commande.*')
              ->where(['User.numUser' => $numeroUser])
+             ->where('Commande.etat','en cours')
              ->orderBy('Client.nom', 'asc')
              ->get();
              return $results; 
@@ -63,10 +64,47 @@ class CommandeController extends Controller
              ->join('Client','Client.numCli','=','passe.numCli')
              ->select('Client.*','Commande.*')
              ->where(['User.numUser' => $numeroUser])
+             ->where('Commande.etat','en cours')
              ->orderBy('Commande.dateCommande', 'asc')
              ->get();
              return $results; 
         }
+
+
+// ROUTE 13 - Commandes passées par User classées par Nom Alphabétique de Client
+        public function oldCommandeName($numeroUser) 
+        {
+
+        $results=DB::table('Commande')
+             ->join('controle','Commande.numCom','=','controle.numCom')
+             ->join('User','controle.numUser','=','User.numUser')
+             ->join('passe','passe.numCom','=','Commande.numCom')
+             ->join('Client','Client.numCli','=','passe.numCli')
+             ->select('Client.*','Commande.*')
+             ->where(['User.numUser' => $numeroUser])
+             ->where('Commande.etat','livrée')
+             ->orderBy('Client.nom', 'asc')
+             ->get();
+             return $results; 
+        }
+
+// ROUTE 14 - Commandes passées par User classées par date
+        public function oldCommandeDate($numeroUser) 
+        {
+
+       $results=DB::table('Commande')
+             ->join('controle','Commande.numCom','=','controle.numCom')
+             ->join('User','controle.numUser','=','User.numUser')
+             ->join('passe','passe.numCom','=','Commande.numCom')
+             ->join('Client','Client.numCli','=','passe.numCli')
+             ->select('Client.*','Commande.*')
+             ->where(['User.numUser' => $numeroUser])
+             ->where('Commande.etat','livrée')
+             ->orderBy('Commande.dateCommande', 'asc')
+             ->get();
+             return $results; 
+        }
+
 
 
 }               
