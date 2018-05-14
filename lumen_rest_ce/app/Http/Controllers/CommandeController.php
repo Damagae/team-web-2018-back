@@ -10,7 +10,7 @@ class CommandeController extends Controller
         return response()->json(Commande::all()); }
 
         public function showOneCommande($numCom) {
-        return response()->json(Commande::find($numBou)); }
+        return response()->json(Commande::find($numCom)); }
 
         public function create(Request $request) {
         $Commande = Commande::create($request->all()); 
@@ -18,7 +18,7 @@ class CommandeController extends Controller
         }
 
         public function update($numCom, Request $request) {
-        $Commande = Commande::findOrFail($id); $Commande->update($request->all());
+        $Commande = Commande::findOrFail($numCom); $Commande->update($request->all());
         return response()->json($Commande, 200); }
 
         public function delete($numCom) {

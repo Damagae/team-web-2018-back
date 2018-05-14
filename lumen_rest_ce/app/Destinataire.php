@@ -28,5 +28,5 @@ class Destinataire extends Model implements AuthenticatableContract, Authorizabl
      * @var array
      */
 
-    ];
+
 }

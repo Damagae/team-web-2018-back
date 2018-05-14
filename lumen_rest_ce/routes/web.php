@@ -17,7 +17,7 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->get('user/alluser', 'UserController@showAllUser');
+$router->get('user/allcommandes', 'CommandeController@showAllCommande');
 
 
 $router->get('/u/{userId}', function ($userId) use ($router) {

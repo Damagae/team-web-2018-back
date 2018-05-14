@@ -28,5 +28,4 @@ class Client extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
 
-    ];
 }

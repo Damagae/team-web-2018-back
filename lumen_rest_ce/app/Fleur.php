@@ -28,5 +28,4 @@ class Fleur extends Model implements AuthenticatableContract, AuthorizableContra
      * @var array
      */
 
-    ];
 }

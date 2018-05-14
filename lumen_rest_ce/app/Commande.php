@@ -28,5 +28,4 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
      * @var array
      */
 
-    ];
 }

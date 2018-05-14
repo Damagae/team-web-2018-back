@@ -28,5 +28,5 @@ class Bouquet extends Model implements AuthenticatableContract, AuthorizableCont
      * @var array
      */
 
-    ];
+
 }
