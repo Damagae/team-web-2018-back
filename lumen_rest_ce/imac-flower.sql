@@ -11,6 +11,7 @@ CREATE TABLE Bouquet(
 
 CREATE TABLE Commande(
 	numCom int primary key,
+	numCli int,
 	etat varchar(20) NOT NULL,
 	dateCommande date NOT NULL,
 	dateLivraison date NOT NULL,
@@ -104,9 +105,9 @@ INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (123131
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (14443444, 20, 35, 'tulipes.jpg','prêt à l envoi',3);
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (32134442, 40, 60, 'tourn.jpg','prêt à l envoi',4);
 
-INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000001,'en cours','2016-11-11','2016-11-13',NULL);
-INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000002,'livrée','2016-11-16','2016-11-22',NULL);
-INSERT INTO Commande(numCom, etat, dateCommande, dateLivraison, photo) VALUES (000003,'en cours','2016-11-18','2016-11-24',NULL);
+INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000001,451367,'en cours','2016-11-11','2016-11-13',NULL);
+INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000002,689351,'livrée','2016-11-16','2016-11-22',NULL);
+INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000003,451367,'en cours','2016-11-18','2016-11-24',NULL);
 
 INSERT INTO Client(numCli, mail, nom, club) VALUES (451367, 'michel58@gmail.com','Michel',false);
 INSERT INTO Client(numCli, mail, nom, club) VALUES (689351, 'rachelle13@hotmail.com','Rousseau',true);

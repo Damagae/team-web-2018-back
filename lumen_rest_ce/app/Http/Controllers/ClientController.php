@@ -24,4 +24,6 @@ class ClientController extends Controller
 		public function delete($numCli) {
 		Client::findOrFail($numCli)->delete();
 		return response('Deleted Successfully', 200); }
+
+	
 }

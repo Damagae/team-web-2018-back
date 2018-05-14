@@ -28,4 +28,8 @@ class Client extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
 
+    public function commandes() 
+        {
+            return $this->hasMany('App\Commande');
+        }
 }

@@ -13,13 +13,14 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
     use Authenticatable, Authorizable;
     protected $table='Commande';
 
+ 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'numCom', 'etat', 'dateCommande', 'popularite', 'dateLivraison'
+        'numCom', 'numCli', 'etat','dateCommande', 'popularite', 'dateLivraison'
     ];
 
     /**
@@ -27,5 +28,12 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
      *
      * @var array
      */
+
+     public function client() 
+    {
+         return $this->belongsTo('App\Client');
+    }
+
+     
 
 }

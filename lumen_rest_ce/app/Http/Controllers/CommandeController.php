@@ -24,4 +24,20 @@ class CommandeController extends Controller
         public function delete($numCom) {
         Commande::findOrFail($numCom)->delete();
         return response('Deleted Successfully', 200); }
-}
+
+
+
+
+
+        // 12 - Commandes en cours par user classées par date 
+        public function currentCommande($numeroClient) {
+
+                  $results=Commande::where(['numCli' => $numeroClient, 'etat' => 'en cours'])
+                  ->orderBy('dateCommande', 'desc')
+                  ->get();
+
+        return $results; }
+
+
+}               
+

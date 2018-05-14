@@ -11,18 +11,28 @@
 |
 */
 
-// Route essai
+// ROUTE 0 - Test Hello World 
 $router->get('/', function () use ($router) {
 	    echo "HELLO WORLD ";
     return $router->app->version();
 });
 
 
-// Afficher toutes les commandes 
-$router->get('user/allcommandes', 'CommandeController@showAllCommande');
+// ROUTE 12 - Commandes en cours classées par date
+
+ $router->get('/{numcli}/commandes', ['uses' => 'CommandeController@currentCommande']);
 
 
-// 6 - Informations personnelles
+
+
+
+
+
+
+
+
+
+/* 6 - Informations personnelles
 $router->get('/u/{userId}', function ($userId) use ($router) {
     echo "hello" .$userId ;
     return $router->app->version();
@@ -44,10 +54,6 @@ $router->get('/u/{userId}/sales/month/:month', function ($userId) use ($router) 
 $router->get(' /u/:userId/orders/current/:sort', function ($userId) use ($router) {
     echo "ORDERS";
     return $router->app->version();
-});
+}); */
 
-// 12 - Commandes en cours classées par date
-$router->get(' /u/:userId/orders/old/:sort', function ($userId) use ($router) {
-    echo "OLD ORDERS";
-    return $router->app->version();
-});
+
