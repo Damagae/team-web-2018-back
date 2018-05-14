@@ -20,11 +20,11 @@ $router->get('/', function () use ($router) {
 
 // ROUTE 12 - Commandes en cours classées par date
 
- $router->get('/{numcli}/commandes', ['uses' => 'CommandeController@currentCommande']);
+ $router->get('/u/{numUser}/orders/current/sort', ['uses' => 'CommandeController@currentCommande']);
 
 
-
-
+// ROUTE 8 - VENTES PAR MOIS 
+//$router->get('/u/{numUser}/sales/month/{month}}/commandes', ['uses' => 'CommandeController@currentCommande']);
 
 
 

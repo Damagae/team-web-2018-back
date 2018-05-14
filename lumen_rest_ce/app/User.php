@@ -19,7 +19,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'numUser', 'mdp', 'mail', 'nom', 'nomMag'
+        'numUser', 'numCom','mdp', 'mail', 'nom', 'nomMag'
     ];
 
     /**
@@ -28,5 +28,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
 
+// Un user a plusieurs commandes. 
+  public function UserCommandes() 
+        {
+            return $this->hasMany('App\Commande');
+        }
    
 }

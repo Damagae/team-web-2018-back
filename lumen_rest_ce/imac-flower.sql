@@ -11,7 +11,9 @@ CREATE TABLE Bouquet(
 
 CREATE TABLE Commande(
 	numCom int primary key,
+	numUser int,
 	numCli int,
+	prixtotal int,
 	etat varchar(20) NOT NULL,
 	dateCommande date NOT NULL,
 	dateLivraison date NOT NULL,
@@ -41,6 +43,7 @@ CREATE TABLE Livreur(
 
 CREATE TABLE User(
 	numUser int primary key,
+	numCom int,
 	mdp varchar(30),
 	mail varchar(320) NOT NULL,
 	nom varchar(30),
@@ -68,12 +71,6 @@ CREATE TABLE compose(
 );
 
 
-CREATE TABLE passe(
-	numCli int,
-	numCom int,
-	constraint cle_prim2 primary key (numCli, numCom)
-);
-
 
 CREATE TABLE concerne(
 	numDes int,
@@ -85,12 +82,6 @@ CREATE TABLE constitue(
 	numBou int,
 	numCom int,
 	constraint cle_prim4 primary key (numBou, numCom)
-);
-
-CREATE TABLE controle(
-	numCom int,
-	numUser int,
-	constraint cle_prim5 primary key (numCom, numUser)
 );
 
 CREATE TABLE livre(
@@ -105,9 +96,9 @@ INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (123131
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (14443444, 20, 35, 'tulipes.jpg','prêt à l envoi',3);
 INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (32134442, 40, 60, 'tourn.jpg','prêt à l envoi',4);
 
-INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000001,451367,'en cours','2016-11-11','2016-11-13',NULL);
-INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000002,689351,'livrée','2016-11-16','2016-11-22',NULL);
-INSERT INTO Commande(numCom, numCli, etat, dateCommande, dateLivraison, photo) VALUES (000003,451367,'en cours','2016-11-18','2016-11-24',NULL);
+INSERT INTO Commande(numCom, numCli,numUser, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000001,451367,99999,230,'en cours','2016-11-11','2016-11-13',NULL);
+INSERT INTO Commande(numCom, numCli,numUser, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000002,689351,99998,43,'livrée','2016-11-16','2016-11-22',NULL);
+INSERT INTO Commande(numCom, numCli,numUser, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000003,451367,99997,120,'en cours','2016-11-18','2016-11-24',NULL);
 
 INSERT INTO Client(numCli, mail, nom, club) VALUES (451367, 'michel58@gmail.com','Michel',false);
 INSERT INTO Client(numCli, mail, nom, club) VALUES (689351, 'rachelle13@hotmail.com','Rousseau',true);
@@ -125,16 +116,13 @@ INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(0451,'Rose',2,3
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1875,'Tournesol',0,3,'poussée');
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1976,'Tulipe',0,3,'plantée');
 
-INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower');
-INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99998,'azerty','mail@gmail.com', 'Damien Trolar', 'Fleurs & co');
+INSERT INTO User(numUser, numCom, mdp, mail, nom, nomMag)  VALUES (99999,000001,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower');
+INSERT INTO User(numUser, numCom, mdp, mail, nom, nomMag)  VALUES (99998,000002,'azerty','mail@gmail.com', 'Damien Trolar', 'Fleurs & co');
 
 INSERT INTO Compose VALUES (12313131, 0451);
 INSERT INTO Compose VALUES (14443444, 1976);
 INSERT INTO Compose VALUES (32134442, 1875);
 
-INSERT INTO Passe VALUES (451367, 000001);
-INSERT INTO Passe VALUES (689351, 000002);
-INSERT INTO Passe VALUES (441367, 000003);
 
 INSERT INTO concerne VALUES (2743155555, 000001);
 INSERT INTO concerne VALUES (1344567857, 000002);
@@ -143,10 +131,6 @@ INSERT INTO concerne VALUES (0000000000, 000003);
 INSERT INTO constitue VALUES (12313131, 000001);
 INSERT INTO constitue VALUES (14443444, 000002);
 INSERT INTO constitue VALUES (32134442, 000003);
-
-INSERT INTO controle VALUES (000001, 99999);
-INSERT INTO controle VALUES (000002, 99998);
-INSERT INTO controle VALUES (000003, 99998);
 
 INSERT INTO livre VALUES (000001, 412345);
 INSERT INTO livre VALUES (000002, 548632);

@@ -30,9 +30,9 @@ class CommandeController extends Controller
 
 
         // 12 - Commandes en cours par user classées par date 
-        public function currentCommande($numeroClient) {
+        public function currentCommande($numeroUser) {
 
-                  $results=Commande::where(['numCli' => $numeroClient, 'etat' => 'en cours'])
+                  $results=Commande::where(['numUser' => $numeroUser])
                   ->orderBy('dateCommande', 'desc')
                   ->get();
 

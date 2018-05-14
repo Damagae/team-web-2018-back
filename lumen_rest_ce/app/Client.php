@@ -28,7 +28,9 @@ class Client extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
 
-    public function commandes() 
+
+// Un client peut avoir plusieurs commandes. 
+    public function ClientCommandes() 
         {
             return $this->hasMany('App\Commande');
         }
