@@ -11,41 +11,42 @@
 |
 */
 
+// Route essai
 $router->get('/', function () use ($router) {
 	    echo "HELLO WORLD ";
     return $router->app->version();
 });
 
 
+// Afficher toutes les commandes 
 $router->get('user/allcommandes', 'CommandeController@showAllCommande');
 
 
+// 6 - Informations personnelles
 $router->get('/u/{userId}', function ($userId) use ($router) {
     echo "hello" .$userId ;
     return $router->app->version();
 });
 
-
-
+// 7 - Objectifs 
 $router->get('/u/{userId}/goals', function ($userId) use ($router) {
     echo "USER GOALS ";
     return $router->app->version();
 });
 
+// 8 - Ventes par mois
 $router->get('/u/{userId}/sales/month/:month', function ($userId) use ($router) {
     echo "MONTHLY SALES";
     return $router->app->version();
 });
 
-
+// 11 -  Commandes en cours classées par client 
 $router->get(' /u/:userId/orders/current/:sort', function ($userId) use ($router) {
     echo "ORDERS";
     return $router->app->version();
 });
 
-
-
-
+// 12 - Commandes en cours classées par date
 $router->get(' /u/:userId/orders/old/:sort', function ($userId) use ($router) {
     echo "OLD ORDERS";
     return $router->app->version();
