@@ -11,6 +11,7 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 class Fleur extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
+    protected $table='Fleur'; // On force pour qu'il prenne Fleur et non pas Fleurs
 
     /**
      * The attributes that are mass assignable.

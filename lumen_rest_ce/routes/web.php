@@ -16,6 +16,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
+$router->get('user/alluser', 'UserController@showAllUser');
+
+
 $router->get('/u/{userId}', function ($userId) use ($router) {
     echo "hello" .$userId ;
     return $router->app->version();
