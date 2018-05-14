@@ -20,7 +20,7 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
      * @var array
      */
     protected $fillable = [
-        'numCom', 'numCli', 'numUser' ,'prixtotal', 'etat','dateCommande', 'popularite', 'dateLivraison'
+        'numCom', 'prixtotal', 'etat','dateCommande', 'popularite', 'dateLivraison'
     ];
 
     /**
@@ -29,7 +29,12 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
      * @var array
      */
 
-// Les Commandes appartiennent à un Client à la fois 
+     public function client() 
+    {
+         return $this->belongsTo('App\Client');
+    }
+
+    // Les Commandes appartiennent à un Client à la fois 
      public function client() 
     {
          return $this->belongsTo('App\Client');
@@ -40,6 +45,7 @@ class Commande extends Model implements AuthenticatableContract, AuthorizableCon
     {
          return $this->belongsTo('App\User');
     }
+
 
      
 

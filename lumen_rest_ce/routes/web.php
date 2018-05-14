@@ -17,43 +17,14 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+// ROUTE 11 - Commandes en cours par User classées par Clients Alphabétique
+ $router->get('/u/{numUser}/orders/current/1', ['uses' => 'CommandeController@currentCommandeName']);
 
-// ROUTE 12 - Commandes en cours classées par date
-
- $router->get('/u/{numUser}/orders/current/sort', ['uses' => 'CommandeController@currentCommande']);
+// ROUTE 12 - Commandes en cours par User classées par date
+ $router->get('/u/{numUser}/orders/current/2', ['uses' => 'CommandeController@currentCommandeDate']);
 
 
 // ROUTE 8 - VENTES PAR MOIS 
 //$router->get('/u/{numUser}/sales/month/{month}}/commandes', ['uses' => 'CommandeController@currentCommande']);
-
-
-
-
-
-
-
-/* 6 - Informations personnelles
-$router->get('/u/{userId}', function ($userId) use ($router) {
-    echo "hello" .$userId ;
-    return $router->app->version();
-});
-
-// 7 - Objectifs 
-$router->get('/u/{userId}/goals', function ($userId) use ($router) {
-    echo "USER GOALS ";
-    return $router->app->version();
-});
-
-// 8 - Ventes par mois
-$router->get('/u/{userId}/sales/month/:month', function ($userId) use ($router) {
-    echo "MONTHLY SALES";
-    return $router->app->version();
-});
-
-// 11 -  Commandes en cours classées par client 
-$router->get(' /u/:userId/orders/current/:sort', function ($userId) use ($router) {
-    echo "ORDERS";
-    return $router->app->version();
-}); */
 
 
