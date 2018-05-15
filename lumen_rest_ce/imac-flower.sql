@@ -107,7 +107,7 @@ INSERT INTO Bouquet(numBou,taille, prix, photo, etat, popularite) VALUES (321344
 
 INSERT INTO Commande(numCom, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000001,232,'en cours','2016-11-11','2016-11-13',NULL);
 INSERT INTO Commande(numCom, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000002,12,'livrée','2016-11-16','2016-11-22',NULL);
-INSERT INTO Commande(numCom, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000003,98,'en cours','2016-11-18','2016-11-24',NULL);
+INSERT INTO Commande(numCom, prixtotal, etat, dateCommande, dateLivraison, photo) VALUES (000003,98,'en cours','2018-05-16','2018-11-24',NULL);
 
 INSERT INTO Client(numCli, mail, nom, club) VALUES (451367, 'michel58@gmail.com','Michel',false);
 INSERT INTO Client(numCli, mail, nom, club) VALUES (689351, 'rachelle13@hotmail.com','Rousseau',true);

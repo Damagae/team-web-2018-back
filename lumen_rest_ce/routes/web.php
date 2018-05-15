@@ -17,6 +17,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
+// ROUTE 8 - VENTES PAR MOIS 
+$router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@monthlySales']);
+
 // ROUTE 11 - Commandes en cours par User classées par Clients Alphabétique
  $router->get('/u/{numUser}/orders/current/1', ['uses' => 'CommandeController@currentCommandeName']);
 
@@ -30,8 +34,5 @@ $router->get('/', function () use ($router) {
 // ROUTE 14 - Commandes passées par User classées par date
  $router->get('/u/{numUser}/orders/old/2', ['uses' => 'CommandeController@oldCommandeDate']);
 
-
-// ROUTE 8 - VENTES PAR MOIS 
-//$router->get('/u/{numUser}/sales/month/{month}}/commandes', ['uses' => 'CommandeController@currentCommande']);
 
 
