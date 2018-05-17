@@ -17,6 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+// ROUTE - TEST ALL ORDERS 
+$router->get('/u/{numUser}/orders', ['uses' => 'CommandeController@AllUserCommandes']);
 
 // ROUTE 8 - VENTES PAR MOIS 
 $router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@monthlySales']);

@@ -34,6 +34,19 @@ class CommandeController extends Controller
             return response('Deleted Successfully', 200); 
         }
 
+// ROUTE TEST 
+        public function AllUserCommandes($numeroUser) 
+        {
+
+        $results=DB::table('Commande')
+             ->join('controle','Commande.numCom','=','controle.numCom')
+             ->join('User','controle.numUser','=','User.numUser')
+             ->join('passe','passe.numCom','=','Commande.numCom')
+             ->select('Commande.*')
+             ->where(['User.numUser' => $numeroUser])
+             ->get();
+             return $results; 
+        }
 
 
 // ROUTE 11 - Commandes en cours par User classées par Nom Alphabétique de Client
