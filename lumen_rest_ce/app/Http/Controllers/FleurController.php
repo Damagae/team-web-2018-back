@@ -39,7 +39,7 @@ class FleurController extends Controller
              ->join('Commande','constitue.numCom','=','Commande.numCom')    
              ->join('controle','Commande.numCom','=','controle.numCom')
              ->join('User','controle.numUser','=','User.numUser')
-             ->select('Commande.*')
+             ->select('Fleur.nomFleu','Fleur.nom','Commande.*')
              ->where(['User.numUser' => $numeroUser])
              ->where(['Fleur.nomFleu' => $numeroPlante])
              ->get();
