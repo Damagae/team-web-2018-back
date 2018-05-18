@@ -23,6 +23,10 @@ $router->get('/u/{numUser}/orders', ['uses' => 'CommandeController@AllUserComman
 // ROUTE 8 - VENTES PAR MOIS 
 $router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@monthlySales']);
 
+
+// ROUTE 9 - VENTES PAR TYPE DE FLEUR
+$router->get('/u/{numUser}/sales/plant/{numFleu}', ['uses' => 'FleurController@flowerSales']);
+
 // ROUTE 11 - Commandes en cours par User classées par Clients Alphabétique
  $router->get('/u/{numUser}/orders/current/1', ['uses' => 'CommandeController@currentCommandeName']);
 
