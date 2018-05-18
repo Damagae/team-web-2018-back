@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Commande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
 
 class CommandeController extends Controller
         {
@@ -35,86 +34,96 @@ class CommandeController extends Controller
             return response('Deleted Successfully', 200);
         }
 
-// ROUTE TEST
+        // ROUTE TEST
         public function AllUserCommandes($numeroUser)
-                {
-                $results=DB::select("SELECT *
-                                     FROM Commande
-                                    --  LEFT JOIN controle ON (Commande.numCom=controle.numCom)
-                                    --  LEFT JOIN User ON (controle.numUser=User.numUser)
-                                    --  LEFT JOIN passe ON (passe.numCom=Commande.numCom)
-                                     WHERE User.numUser=$numeroUser");
-                     return $results;
-                }
+        {
+            $results=DB::table('commande')
+                 ->join('controle','commande.numcom','=','controle.numcom')
+                 ->join('florist','controle.numuser','=','florist.numuser')
+                 ->join('passe','passe.numcom','=','commande.numcom')
+                 ->select('commande.*')
+                 ->where(['florist.numuser' => $numeroUser])
+                 ->get();
+            return $results;
+        }
 
+        /*
+        // ROUTE TEST
+        public function AllUserCommandes($numeroUser)
+        {
+        $results=DB::select("SELECT *
+                             FROM Commande
+                             LEFT JOIN controle ON (Commande.numCom=controle.numCom)
+                             LEFT JOIN Florist ON (controle.numUser=Florist.numUser)
+                             LEFT JOIN passe ON (passe.numCom=Commande.numCom)
+                             WHERE Florist.numUser=$numeroUser");
+             return $results;
+        }
+        */
 
-// ROUTE 11 - Commandes en cours par User classées par Nom Alphabétique de Client
+        // ROUTE 11 - Commandes en cours par User classées par Nom Alphabétique de Client
         public function currentCommandeName($numeroUser)
         {
-
-        $results=DB::table('Commande')
-             ->join('controle','Commande.numCom','=','controle.numCom')
-             ->join('User','controle.numUser','=','User.numUser')
-             ->join('passe','passe.numCom','=','Commande.numCom')
-             ->join('Client','Client.numCli','=','passe.numCli')
-             ->select('Client.*','Commande.*')
-             ->where(['User.numUser' => $numeroUser])
-             ->where('Commande.etat','en cours')
-             ->orderBy('Client.nom', 'asc')
-             ->get();
-             return $results;
+            $results=DB::table('commande')
+                 ->join('controle','commande.numcom','=','controle.numcom')
+                 ->join('florist','controle.numuser','=','florist.numuser')
+                 ->join('passe','passe.numcom','=','commande.numcom')
+                 ->join('client','client.numcli','=','passe.numcli')
+                 ->select('client.*','commande.*')
+                 ->where(['florist.numuser' => $numeroUser])
+                 ->where('commande.etat','en cours')
+                 ->orderBy('client.nom', 'asc')
+                 ->get();
+            return $results;
         }
 
-// ROUTE 12 - Commandes en cours par User classées par date
+        // ROUTE 12 - Commandes en cours par User classées par date
         public function currentCommandeDate($numeroUser)
         {
-
-       $results=DB::table('Commande')
-             ->join('controle','Commande.numCom','=','controle.numCom')
-             ->join('User','controle.numUser','=','User.numUser')
-             ->join('passe','passe.numCom','=','Commande.numCom')
-             ->join('Client','Client.numCli','=','passe.numCli')
-             ->select('Client.*','Commande.*')
-             ->where(['User.numUser' => $numeroUser])
-             ->where('Commande.etat','en cours')
-             ->orderBy('Commande.dateCommande', 'asc')
-             ->get();
-             return $results;
+           $results=DB::table('commande')
+                 ->join('controle','commande.numcom','=','controle.numcom')
+                 ->join('florist','controle.numuser','=','florist.numuser')
+                 ->join('passe','passe.numcom','=','commande.numcom')
+                 ->join('client','client.numcli','=','passe.numcli')
+                 ->select('client.*','commande.*')
+                 ->where(['florist.numuser' => $numeroUser])
+                 ->where('commande.etat','en cours')
+                 ->orderBy('commande.datecommande', 'asc')
+                 ->get();
+            return $results;
         }
 
 
-// ROUTE 13 - Commandes passées par User classées par Nom Alphabétique de Client
+        // ROUTE 13 - Commandes passées par User classées par Nom Alphabétique de client
         public function oldCommandeName($numeroUser)
         {
-
-        $results=DB::table('Commande')
-             ->join('controle','Commande.numCom','=','controle.numCom')
-             ->join('User','controle.numUser','=','User.numUser')
-             ->join('passe','passe.numCom','=','Commande.numCom')
-             ->join('Client','Client.numCli','=','passe.numCli')
-             ->select('Client.*','Commande.*')
-             ->where(['User.numUser' => $numeroUser])
-             ->where('Commande.etat','livrée')
-             ->orderBy('Client.nom', 'asc')
-             ->get();
-             return $results;
+            $results=DB::table('commande')
+                 ->join('controle','commande.numcom','=','controle.numcom')
+                 ->join('florist','controle.numuser','=','florist.numuser')
+                 ->join('passe','passe.numcom','=','commande.numcom')
+                 ->join('client','client.numcli','=','passe.numcli')
+                 ->select('client.*','commande.*')
+                 ->where(['florist.numuser' => $numeroUser])
+                 ->where('commande.etat','livrée')
+                 ->orderBy('client.nom', 'asc')
+                 ->get();
+            return $results;
         }
 
-// ROUTE 14 - Commandes passées par User classées par date
+        // ROUTE 14 - Commandes passées par User classées par date
         public function oldCommandeDate($numeroUser)
         {
-
-       $results=DB::table('Commande')
-             ->join('controle','Commande.numCom','=','controle.numCom')
-             ->join('User','controle.numUser','=','User.numUser')
-             ->join('passe','passe.numCom','=','Commande.numCom')
-             ->join('Client','Client.numCli','=','passe.numCli')
-             ->select('Client.*','Commande.*')
-             ->where(['User.numUser' => $numeroUser])
-             ->where('Commande.etat','livrée')
-             ->orderBy('Commande.dateCommande', 'asc')
-             ->get();
-             return $results;
+           $results=DB::table('commande')
+                 ->join('controle','commande.numcom','=','controle.numcom')
+                 ->join('florist','controle.numuser','=','florist.numuser')
+                 ->join('passe','passe.numcom','=','commande.numcom')
+                 ->join('client','client.numcli','=','passe.numcli')
+                 ->select('client.*','commande.*')
+                 ->where(['florist.numuser' => $numeroUser])
+                 ->where('commande.etat','livrée')
+                 ->orderBy('commande.datecommande', 'asc')
+                 ->get();
+            return $results;
         }
 
 

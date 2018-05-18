@@ -1,6 +1,4 @@
 <?php
-ini_set("display_errors", 1);
-error_reporting(E_ALL);
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +17,20 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+// ROUTE - TEST ALL ORDERS
 $router->get('/u/{numUser}/orders', ['uses' => 'CommandeController@AllUserCommandes']);
-
-$router->get('/all', ['uses' => 'UserController@all']);
-
-$router->get('/test', ['uses' => 'UserController@test']);
 
 // ROUTE 8 - VENTES PAR MOIS
 $router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@monthlySales']);
+
+// ROUTE 9 - VENTES PAR TYPE DE FLEUR
+$router->get('/u/{numUser}/sales/plant/{numFleu}', ['uses' => 'FleurController@flowerSales']);
 
 // ROUTE 11 - Commandes en cours par User classées par Clients Alphabétique
  $router->get('/u/{numUser}/orders/current/1', ['uses' => 'CommandeController@currentCommandeName']);
 
 // ROUTE 12 - Commandes en cours par User classées par date
  $router->get('/u/{numUser}/orders/current/2', ['uses' => 'CommandeController@currentCommandeDate']);
-
 
 // ROUTE 13 - Commandes passées par User classées par Clients Alphabétique
  $router->get('/u/{numUser}/orders/old/1', ['uses' => 'CommandeController@oldCommandeName']);

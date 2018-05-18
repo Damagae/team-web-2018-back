@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use vendor\Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 		{
@@ -36,43 +35,20 @@ class UserController extends Controller
 			User::findOrFail($numUser)->delete();
 			return response('Deleted Successfully', 200);
 		}
-
-		// TEST - tous les Users
-		public function all()
-		{
-		$carbon = new Carbon();
-		$carbon = Carbon::now('Europe/London');
-		$results = DB::select("SELECT * FROM Florist");
-		return $results;
-		}
-
-		// TEST - fonction de débug
-		public function test()
-		{
-		$carbon = new Carbon();
-		$carbon = Carbon::now('Europe/London');
-		//$results=DB::table('Commande')->get();
-				//  ->join('controle','Commande.numCom','=','controle.numCom')
-				//  ->join('Florist','controle.numUser','=','Florist.numUser')
-				//  ->select('Commande.*')
-				//  ->where(['Florist.numUser' => $numeroUser])
-				//  ->where('Commande.dateCommande','>', $carbon->submonth())
-		$results=DB::table('Commande')->get();
-		return $results;
-		}
+		
 
 		// ROUTE 08 - Ventes par mois par User
-        public function monthlySales($numeroUser)
-        {
-        $carbon = new Carbon();
-        $carbon = Carbon::now('Europe/London');
-        $results=DB::table('Commande')
-             ->join('controle','Commande.numCom','=','controle.numCom')
-             ->join('Florist','controle.numUser','=','Florist.numUser')
-             ->select('Commande.*')
-             ->where(['Florist.numUser' => $numeroUser])
-             ->where('Commande.dateCommande','>', $carbon->submonth())
-             ->get();
-             return $results;
-        }
+    public function monthlySales($numeroUser)
+    {
+	    $carbon = new Carbon();
+	    $carbon = Carbon::now('Europe/London');
+	    $results=DB::table('commande')
+	         ->join('controle','commande.numcom','=','controle.numcom')
+	         ->join('florist','controle.numuser','=','florist.numuser')
+	         ->select('commande.*')
+	         ->where(['florist.numuser' => $numeroUser])
+	         ->where('commande.datecommande','>', $carbon->submonth())
+	         ->get();
+	    return $results;
+	  }
 }
