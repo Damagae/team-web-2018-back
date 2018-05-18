@@ -19,6 +19,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/u/{numUser}/orders', ['uses' => 'CommandeController@AllUserCommandes']);
+
 $router->get('/all', ['uses' => 'UserController@all']);
 
 $router->get('/test', ['uses' => 'UserController@test']);

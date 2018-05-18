@@ -64,7 +64,6 @@ class UserController extends Controller
 		// ROUTE 08 - Ventes par mois par User
         public function monthlySales($numeroUser)
         {
-				echo $numeroUser;
         $carbon = new Carbon();
         $carbon = Carbon::now('Europe/London');
         $results=DB::table('Commande')
