@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors", 1);
+error_reporting(E_ALL);
 
 /*
 |--------------------------------------------------------------------------
@@ -11,14 +13,17 @@
 |
 */
 
-// ROUTE 0 - Test Hello World 
+// ROUTE 0 - Test Hello World
 $router->get('/', function () use ($router) {
-	    echo "HELLO WORLD ";
+	   echo "HELLO WORLD ";
     return $router->app->version();
 });
 
+$router->get('/all', ['uses' => 'UserController@all']);
 
-// ROUTE 8 - VENTES PAR MOIS 
+$router->get('/test', ['uses' => 'UserController@test']);
+
+// ROUTE 8 - VENTES PAR MOIS
 $router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@monthlySales']);
 
 // ROUTE 11 - Commandes en cours par User classées par Clients Alphabétique
@@ -33,6 +38,3 @@ $router->get('/u/{numUser}/sales/month/commandes', ['uses' => 'UserController@mo
 
 // ROUTE 14 - Commandes passées par User classées par date
  $router->get('/u/{numUser}/orders/old/2', ['uses' => 'CommandeController@oldCommandeDate']);
-
-
-

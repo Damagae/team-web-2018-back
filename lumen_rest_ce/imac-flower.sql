@@ -38,8 +38,8 @@ CREATE TABLE Livreur(
 	modeLivraison varchar(20) NOT NULL, /*Mode de livraison = {livreur, poste}*/
 	etat varchar(30)
 );
-
-CREATE TABLE User(
+/* */
+CREATE TABLE Florist(
 	numUser int primary key,
 	mdp varchar(30),
 	mail varchar(320) NOT NULL,
@@ -57,9 +57,7 @@ CREATE TABLE Fleur(
 
 
 
-/*////////////////
-//// LES RELATIONS
-////////////////*/
+/*LES RELATIONS*/
 
 CREATE TABLE compose(
 	numBou int,
@@ -125,8 +123,8 @@ INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(0451,'Rose',2,3
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1875,'Tournesol',0,3,'poussée');
 INSERT INTO Fleur(nomFleu , nom, stockFleu, nbFleu, etat) VALUES(1976,'Tulipe',0,3,'plantée');
 
-INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower');
-INSERT INTO User(numUser, mdp, mail, nom, nomMag)  VALUES (99998,'azerty','mail@gmail.com', 'Damien Trolar', 'Fleurs & co');
+INSERT INTO Florist(numUser, mdp, mail, nom, nomMag)  VALUES (99999,'trolol','trolol@gmail.com', 'trolol', 'FlowerPower');
+INSERT INTO Florist(numUser, mdp, mail, nom, nomMag)  VALUES (99998,'azerty','mail@gmail.com', 'Damien Trolar', 'Fleurs & co');
 
 INSERT INTO Compose VALUES (12313131, 0451);
 INSERT INTO Compose VALUES (14443444, 1976);

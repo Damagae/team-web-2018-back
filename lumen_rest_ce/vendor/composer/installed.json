@@ -1,5 +1,58 @@
 [
     {
+        "name": "csanquer/pdo-service-provider",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/csanquer/PdoServiceProvider.git",
+            "reference": "2b07fd86e145916a47723ca08452ada4dc675d58"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/csanquer/PdoServiceProvider/zipball/2b07fd86e145916a47723ca08452ada4dc675d58",
+            "reference": "2b07fd86e145916a47723ca08452ada4dc675d58",
+            "shasum": ""
+        },
+        "require": {
+            "silex/silex": "~2.0",
+            "symfony/options-resolver": "~2.7|3.0.*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8"
+        },
+        "time": "2018-01-03T09:49:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Csanquer\\Silex\\PdoServiceProvider\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Charles Sanquer",
+                "email": "charles.sanquer@gmail.com"
+            }
+        ],
+        "description": "a PDO database service provider for silex",
+        "keywords": [
+            "database",
+            "pdo",
+            "service provider",
+            "silex"
+        ]
+    },
+    {
         "name": "doctrine/inflector",
         "version": "v1.3.0",
         "version_normalized": "1.3.0.0",
@@ -279,8 +332,8 @@
     },
     {
         "name": "illuminate/auth",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/auth.git",
@@ -332,8 +385,8 @@
     },
     {
         "name": "illuminate/broadcasting",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/broadcasting.git",
@@ -384,8 +437,8 @@
     },
     {
         "name": "illuminate/bus",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/bus.git",
@@ -431,17 +484,17 @@
     },
     {
         "name": "illuminate/cache",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/cache.git",
-            "reference": "c04e07baf0377671031b12469c3165c4c2ebb3e4"
+            "reference": "befdd3ee01faa38a63830eec5bc2ccdc8f7eb1f5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/cache/zipball/c04e07baf0377671031b12469c3165c4c2ebb3e4",
-            "reference": "c04e07baf0377671031b12469c3165c4c2ebb3e4",
+            "url": "https://api.github.com/repos/illuminate/cache/zipball/befdd3ee01faa38a63830eec5bc2ccdc8f7eb1f5",
+            "reference": "befdd3ee01faa38a63830eec5bc2ccdc8f7eb1f5",
             "shasum": ""
         },
         "require": {
@@ -454,7 +507,7 @@
             "illuminate/filesystem": "Required to use the file cache driver (5.6.*).",
             "illuminate/redis": "Required to use the redis cache driver (5.6.*)."
         },
-        "time": "2018-04-07T17:05:26+00:00",
+        "time": "2018-05-04T13:22:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -482,8 +535,8 @@
     },
     {
         "name": "illuminate/config",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/config.git",
@@ -528,8 +581,8 @@
     },
     {
         "name": "illuminate/console",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/console.git",
@@ -580,17 +633,17 @@
     },
     {
         "name": "illuminate/container",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/container.git",
-            "reference": "4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a"
+            "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a",
-            "reference": "4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
+            "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
             "shasum": ""
         },
         "require": {
@@ -598,7 +651,7 @@
             "php": "^7.1.3",
             "psr/container": "~1.0"
         },
-        "time": "2018-01-21T02:13:38+00:00",
+        "time": "2018-05-14T12:49:42+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -626,17 +679,17 @@
     },
     {
         "name": "illuminate/contracts",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/contracts.git",
-            "reference": "322ec80498b3bf85bc4025d028e130a9b50242b9"
+            "reference": "3dc639feabe0f302f574157a782ede323881a944"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/contracts/zipball/322ec80498b3bf85bc4025d028e130a9b50242b9",
-            "reference": "322ec80498b3bf85bc4025d028e130a9b50242b9",
+            "url": "https://api.github.com/repos/illuminate/contracts/zipball/3dc639feabe0f302f574157a782ede323881a944",
+            "reference": "3dc639feabe0f302f574157a782ede323881a944",
             "shasum": ""
         },
         "require": {
@@ -644,7 +697,7 @@
             "psr/container": "~1.0",
             "psr/simple-cache": "~1.0"
         },
-        "time": "2018-04-07T17:05:26+00:00",
+        "time": "2018-05-11T23:38:58+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -672,17 +725,17 @@
     },
     {
         "name": "illuminate/database",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "e7d0688105df14ba973ff31dd91a7669e96dcb63"
+            "reference": "713d376a2e2b9c7cded8916125c24b7b3adb4984"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/e7d0688105df14ba973ff31dd91a7669e96dcb63",
-            "reference": "e7d0688105df14ba973ff31dd91a7669e96dcb63",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/713d376a2e2b9c7cded8916125c24b7b3adb4984",
+            "reference": "713d376a2e2b9c7cded8916125c24b7b3adb4984",
             "shasum": ""
         },
         "require": {
@@ -699,7 +752,7 @@
             "illuminate/filesystem": "Required to use the migrations (5.6.*).",
             "illuminate/pagination": "Required to paginate the result set (5.6.*)."
         },
-        "time": "2018-05-02T15:18:51+00:00",
+        "time": "2018-05-14T22:33:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -733,8 +786,8 @@
     },
     {
         "name": "illuminate/encryption",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/encryption.git",
@@ -781,8 +834,8 @@
     },
     {
         "name": "illuminate/events",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/events.git",
@@ -828,17 +881,17 @@
     },
     {
         "name": "illuminate/filesystem",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/filesystem.git",
-            "reference": "ad4a3655ad695f5b1f5e155bfda61597e0e9fc8b"
+            "reference": "a4ca4a9c2f969ec227748ab334693144995ba0ce"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/filesystem/zipball/ad4a3655ad695f5b1f5e155bfda61597e0e9fc8b",
-            "reference": "ad4a3655ad695f5b1f5e155bfda61597e0e9fc8b",
+            "url": "https://api.github.com/repos/illuminate/filesystem/zipball/a4ca4a9c2f969ec227748ab334693144995ba0ce",
+            "reference": "a4ca4a9c2f969ec227748ab334693144995ba0ce",
             "shasum": ""
         },
         "require": {
@@ -854,7 +907,7 @@
             "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
             "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (~1.0)."
         },
-        "time": "2018-04-25T14:22:57+00:00",
+        "time": "2018-05-02T16:10:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -882,17 +935,17 @@
     },
     {
         "name": "illuminate/hashing",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/hashing.git",
-            "reference": "230859eb01c72dfe1d17e0283e27b6720337abb5"
+            "reference": "a7e11986c3e6614f3c407c49190b8f8adc56e434"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/hashing/zipball/230859eb01c72dfe1d17e0283e27b6720337abb5",
-            "reference": "230859eb01c72dfe1d17e0283e27b6720337abb5",
+            "url": "https://api.github.com/repos/illuminate/hashing/zipball/a7e11986c3e6614f3c407c49190b8f8adc56e434",
+            "reference": "a7e11986c3e6614f3c407c49190b8f8adc56e434",
             "shasum": ""
         },
         "require": {
@@ -900,7 +953,7 @@
             "illuminate/support": "5.6.*",
             "php": "^7.1.3"
         },
-        "time": "2018-03-18T12:58:03+00:00",
+        "time": "2018-05-13T13:27:36+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -928,17 +981,17 @@
     },
     {
         "name": "illuminate/http",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/http.git",
-            "reference": "1c58a1fd0b668c9d7203c6e69ba7391431815e47"
+            "reference": "25559979ca88bc7714832f3b13e12ed8892b9bdd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/http/zipball/1c58a1fd0b668c9d7203c6e69ba7391431815e47",
-            "reference": "1c58a1fd0b668c9d7203c6e69ba7391431815e47",
+            "url": "https://api.github.com/repos/illuminate/http/zipball/25559979ca88bc7714832f3b13e12ed8892b9bdd",
+            "reference": "25559979ca88bc7714832f3b13e12ed8892b9bdd",
             "shasum": ""
         },
         "require": {
@@ -948,7 +1001,7 @@
             "symfony/http-foundation": "~4.0",
             "symfony/http-kernel": "~4.0"
         },
-        "time": "2018-03-12T13:37:01+00:00",
+        "time": "2018-05-04T18:20:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -976,8 +1029,8 @@
     },
     {
         "name": "illuminate/log",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/log.git",
@@ -1023,17 +1076,17 @@
     },
     {
         "name": "illuminate/pagination",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/pagination.git",
-            "reference": "030f10b9adf986bbf028c46ca3c4eca8f910dc6e"
+            "reference": "ee3177bd380ea2be7c0330d8ef8b0ab858be8947"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/pagination/zipball/030f10b9adf986bbf028c46ca3c4eca8f910dc6e",
-            "reference": "030f10b9adf986bbf028c46ca3c4eca8f910dc6e",
+            "url": "https://api.github.com/repos/illuminate/pagination/zipball/ee3177bd380ea2be7c0330d8ef8b0ab858be8947",
+            "reference": "ee3177bd380ea2be7c0330d8ef8b0ab858be8947",
             "shasum": ""
         },
         "require": {
@@ -1041,7 +1094,7 @@
             "illuminate/support": "5.6.*",
             "php": "^7.1.3"
         },
-        "time": "2018-04-25T14:32:32+00:00",
+        "time": "2018-05-06T14:22:45+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1069,17 +1122,17 @@
     },
     {
         "name": "illuminate/pipeline",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/pipeline.git",
-            "reference": "0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b"
+            "reference": "07b12156ad6d429d9f0ea179b2ed1e918372023e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/pipeline/zipball/0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b",
-            "reference": "0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b",
+            "url": "https://api.github.com/repos/illuminate/pipeline/zipball/07b12156ad6d429d9f0ea179b2ed1e918372023e",
+            "reference": "07b12156ad6d429d9f0ea179b2ed1e918372023e",
             "shasum": ""
         },
         "require": {
@@ -1087,7 +1140,7 @@
             "illuminate/support": "5.6.*",
             "php": "^7.1.3"
         },
-        "time": "2017-11-07T20:23:51+00:00",
+        "time": "2018-05-14T13:08:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1115,8 +1168,8 @@
     },
     {
         "name": "illuminate/queue",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/queue.git",
@@ -1174,8 +1227,8 @@
     },
     {
         "name": "illuminate/session",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/session.git",
@@ -1226,17 +1279,17 @@
     },
     {
         "name": "illuminate/support",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "2a97d211c052f6d6ce9756c89d64b855d860d923"
+            "reference": "2ef559ad8840481d5247bd7ebfd04eb37d3f6889"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/2a97d211c052f6d6ce9756c89d64b855d860d923",
-            "reference": "2a97d211c052f6d6ce9756c89d64b855d860d923",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/2ef559ad8840481d5247bd7ebfd04eb37d3f6889",
+            "reference": "2ef559ad8840481d5247bd7ebfd04eb37d3f6889",
             "shasum": ""
         },
         "require": {
@@ -1254,7 +1307,7 @@
             "symfony/process": "Required to use the composer class (~4.0).",
             "symfony/var-dumper": "Required to use the dd function (~4.0)."
         },
-        "time": "2018-05-02T14:59:13+00:00",
+        "time": "2018-05-12T17:43:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1285,8 +1338,8 @@
     },
     {
         "name": "illuminate/translation",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/translation.git",
@@ -1332,17 +1385,17 @@
     },
     {
         "name": "illuminate/validation",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/validation.git",
-            "reference": "538df21edc299d6eef06afd8c467f0cd8cfc2ae2"
+            "reference": "d23f9a63ef018f103ad5563782bdd516f5f5f806"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/validation/zipball/538df21edc299d6eef06afd8c467f0cd8cfc2ae2",
-            "reference": "538df21edc299d6eef06afd8c467f0cd8cfc2ae2",
+            "url": "https://api.github.com/repos/illuminate/validation/zipball/d23f9a63ef018f103ad5563782bdd516f5f5f806",
+            "reference": "d23f9a63ef018f103ad5563782bdd516f5f5f806",
             "shasum": ""
         },
         "require": {
@@ -1356,7 +1409,7 @@
         "suggest": {
             "illuminate/database": "Required to use the database presence verifier (5.6.*)."
         },
-        "time": "2018-04-26T13:23:31+00:00",
+        "time": "2018-05-08T13:22:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1384,8 +1437,8 @@
     },
     {
         "name": "illuminate/view",
-        "version": "v5.6.20",
-        "version_normalized": "5.6.20.0",
+        "version": "v5.6.22",
+        "version_normalized": "5.6.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/view.git",
@@ -1519,17 +1572,17 @@
     },
     {
         "name": "mockery/mockery",
-        "version": "1.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/mockery/mockery.git",
-            "reference": "1bac8c362b12f522fdd1f1fa3556284c91affa38"
+            "reference": "99e29d3596b16dabe4982548527d5ddf90232e99"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mockery/mockery/zipball/1bac8c362b12f522fdd1f1fa3556284c91affa38",
-            "reference": "1bac8c362b12f522fdd1f1fa3556284c91affa38",
+            "url": "https://api.github.com/repos/mockery/mockery/zipball/99e29d3596b16dabe4982548527d5ddf90232e99",
+            "reference": "99e29d3596b16dabe4982548527d5ddf90232e99",
             "shasum": ""
         },
         "require": {
@@ -1538,9 +1591,10 @@
             "php": ">=5.6.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "~5.7|~6.1"
+            "phpdocumentor/phpdocumentor": "^2.9",
+            "phpunit/phpunit": "~5.7.10|~6.5"
         },
-        "time": "2017-10-06T16:20:43+00:00",
+        "time": "2018-05-08T08:54:48+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1569,8 +1623,8 @@
                 "homepage": "http://davedevelopment.co.uk"
             }
         ],
-        "description": "Mockery is a simple yet flexible PHP mock object framework for use in unit testing with PHPUnit, PHPSpec or any other testing framework. Its core goal is to offer a test double framework with a succinct API capable of clearly defining all possible object operations and interactions using a human readable Domain Specific Language (DSL). Designed as a drop in alternative to PHPUnit's phpunit-mock-objects library, Mockery is easy to integrate with PHPUnit and can operate alongside phpunit-mock-objects without the World ending.",
-        "homepage": "http://github.com/mockery/mockery",
+        "description": "Mockery is a simple yet flexible PHP mock object framework",
+        "homepage": "https://github.com/mockery/mockery",
         "keywords": [
             "BDD",
             "TDD",
@@ -2538,6 +2592,58 @@
         ]
     },
     {
+        "name": "pimple/pimple",
+        "version": "v3.2.3",
+        "version_normalized": "3.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/silexphp/Pimple.git",
+            "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
+            "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/container": "^1.0"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^3.2"
+        },
+        "time": "2018-01-21T07:42:36+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Pimple": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Pimple, a simple Dependency Injection Container",
+        "homepage": "http://pimple.sensiolabs.org",
+        "keywords": [
+            "container",
+            "dependency injection"
+        ]
+    },
+    {
         "name": "psr/container",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -3273,6 +3379,94 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
+        "name": "silex/silex",
+        "version": "v2.3.0",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/silexphp/Silex.git",
+            "reference": "6bc31c1b8c4ef614a7115320fd2d3b958032f131"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/silexphp/Silex/zipball/6bc31c1b8c4ef614a7115320fd2d3b958032f131",
+            "reference": "6bc31c1b8c4ef614a7115320fd2d3b958032f131",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.3",
+            "pimple/pimple": "^3.0",
+            "symfony/event-dispatcher": "^4.0",
+            "symfony/http-foundation": "^4.0",
+            "symfony/http-kernel": "^4.0",
+            "symfony/routing": "^4.0"
+        },
+        "replace": {
+            "silex/api": "self.version",
+            "silex/providers": "self.version"
+        },
+        "require-dev": {
+            "doctrine/dbal": "^2.2",
+            "monolog/monolog": "^1.4.1",
+            "swiftmailer/swiftmailer": "^5",
+            "symfony/asset": "^4.0",
+            "symfony/browser-kit": "^4.0",
+            "symfony/config": "^4.0",
+            "symfony/css-selector": "^4.0",
+            "symfony/debug": "^4.0",
+            "symfony/doctrine-bridge": "^4.0",
+            "symfony/dom-crawler": "^4.0",
+            "symfony/expression-language": "^4.0",
+            "symfony/finder": "^4.0",
+            "symfony/form": "^4.0",
+            "symfony/intl": "^4.0",
+            "symfony/monolog-bridge": "^4.0",
+            "symfony/options-resolver": "^4.0",
+            "symfony/phpunit-bridge": "^3.2",
+            "symfony/process": "^4.0",
+            "symfony/security": "^4.0",
+            "symfony/serializer": "^4.0",
+            "symfony/translation": "^4.0",
+            "symfony/twig-bridge": "^4.0",
+            "symfony/validator": "^4.0",
+            "symfony/var-dumper": "^4.0",
+            "symfony/web-link": "^4.0",
+            "twig/twig": "^2.0"
+        },
+        "time": "2018-04-20T05:17:01+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Silex\\": "src/Silex"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            }
+        ],
+        "description": "The PHP micro-framework based on the Symfony Components",
+        "homepage": "http://silex.sensiolabs.org",
+        "keywords": [
+            "microframework"
+        ]
+    },
+    {
         "name": "symfony/console",
         "version": "v4.0.9",
         "version_normalized": "4.0.9.0",
@@ -3660,6 +3854,62 @@
         "homepage": "https://symfony.com"
     },
     {
+        "name": "symfony/options-resolver",
+        "version": "v3.0.9",
+        "version_normalized": "3.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/options-resolver.git",
+            "reference": "77f7252e377e1dc021ba74defe12a19a45bb1212"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/77f7252e377e1dc021ba74defe12a19a45bb1212",
+            "reference": "77f7252e377e1dc021ba74defe12a19a45bb1212",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2016-05-09T18:14:44+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\OptionsResolver\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony OptionsResolver Component",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "config",
+            "configuration",
+            "options"
+        ]
+    },
+    {
         "name": "symfony/polyfill-mbstring",
         "version": "v1.8.0",
         "version_normalized": "1.8.0.0",
@@ -3770,6 +4020,86 @@
         ],
         "description": "Symfony Process Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/routing",
+        "version": "v4.0.9",
+        "version_normalized": "4.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/routing.git",
+            "reference": "1dfbfdf060bbc80da8dedc062050052e694cd027"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/routing/zipball/1dfbfdf060bbc80da8dedc062050052e694cd027",
+            "reference": "1dfbfdf060bbc80da8dedc062050052e694cd027",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "conflict": {
+            "symfony/config": "<3.4",
+            "symfony/dependency-injection": "<3.4",
+            "symfony/yaml": "<3.4"
+        },
+        "require-dev": {
+            "doctrine/annotations": "~1.0",
+            "doctrine/common": "~2.2",
+            "psr/log": "~1.0",
+            "symfony/config": "~3.4|~4.0",
+            "symfony/dependency-injection": "~3.4|~4.0",
+            "symfony/expression-language": "~3.4|~4.0",
+            "symfony/http-foundation": "~3.4|~4.0",
+            "symfony/yaml": "~3.4|~4.0"
+        },
+        "suggest": {
+            "doctrine/annotations": "For using the annotation loader",
+            "symfony/config": "For using the all-in-one router or any loader",
+            "symfony/dependency-injection": "For loading routes from a service",
+            "symfony/expression-language": "For using expression matching",
+            "symfony/http-foundation": "For using a Symfony Request object",
+            "symfony/yaml": "For using the YAML loader"
+        },
+        "time": "2018-04-20T06:20:23+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Routing\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Routing Component",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "router",
+            "routing",
+            "uri",
+            "url"
+        ]
     },
     {
         "name": "symfony/translation",

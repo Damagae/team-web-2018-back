@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
-    protected $table='User';
+    protected $table='Florist';
 
     /**
      * The attributes that are mass assignable.
@@ -28,12 +28,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
 
-   
-// Un user a plusieurs commandes. 
-  public function UserCommandes() 
+
+// Un user a plusieurs commandes.
+  public function UserCommandes()
         {
             return $this->hasMany('App\Commande');
         }
 
-        
+
 }
