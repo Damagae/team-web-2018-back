@@ -37,7 +37,6 @@ class CommandeController extends Controller
 // ROUTE TEST 
         public function AllUserCommandes($numeroUser) 
         {
-
         $results=DB::table('Commande')
              ->join('controle','Commande.numCom','=','controle.numCom')
              ->join('User','controle.numUser','=','User.numUser')
@@ -48,7 +47,20 @@ class CommandeController extends Controller
              return $results; 
         }
 
+    /*    // ROUTE TEST 
+        public function AllUserCommandes($numeroUser) 
+        {
+        $results=DB::select("SELECT * 
+                             FROM Commande
+                             LEFT JOIN controle ON (Commande.numCom=controle.numCom)
+                             LEFT JOIN User ON (controle.numUser=User.numUser)
+                             LEFT JOIN passe ON (passe.numCom=Commande.numCom)
+                             WHERE User.numUser=$numeroUser");
+             return $results; 
+        }
 
+*/ 
+        
 // ROUTE 11 - Commandes en cours par User classées par Nom Alphabétique de Client
         public function currentCommandeName($numeroUser) 
         {
